@@ -79,3 +79,4 @@ def sign_up(request):
     return render(request, template_name, context)
 
 # Here are all the views content
+# Here are all the views content
