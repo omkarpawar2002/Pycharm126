@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'app1/css/help.css' %}">
+    <title>Help</title>
+{% endblock %}
+
+{% block content %}
+    <div class="one">
+        <div class="container">
+            <h2>It Help Desk</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ex nemo nesciunt?</p>
+            <h3>Submit a New It Request</h3>
+            <form method="POST">
+                {% csrf_token %}
+                <div>
+                    <label for="n1">UserName</label>
+                    <br>
+                    <input type="email" id="n1" name="Email" placeholder="E.g.,youremail@gmail.in">
+                </div>
+                <div>
+                    <label for="d1">Details</label>
+                    <br>
+                    <input type="text" id="d1" name="Details">
+                </div>
+                <div>
+                    <label for="c1">Select Category</label><br>
+                    <select name="category" id="c1">
+                        <option value="" selected disabled>Select Choice</option>
+                        <option value="Mobile">Mobile</option>
+                        <option value="laptop">laptop</option>
+                        <option value="Desktop">Desktop</option>
+                        <option value="Tv">Tv</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="submit" class="btn1">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

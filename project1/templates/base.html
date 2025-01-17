@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Baloo Bhai 2", sans-serif;
+        }
+
+        .navbar {
+            border: 2px solid black;
+            background-color: #302279;
+        }
+
+        .navbar ul {
+            overflow: auto;
+        }
+
+        .navbar li {
+            float: left;
+            padding: 2px 27px;
+            margin: 12px 24px;
+            list-style: none;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        .navbar li a:hover{
+            text-decoration: underline;
+            color: grey;
+        }
+
+        .btn {
+            border: 2px solid black;
+            padding: 6px 26px;
+            margin: 8px 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            float: right;
+        }
+
+        .btn:hover{
+            text-decoration: underline;
+            background-color: black;
+            color: white;
+        }
+    </style>
+  <title>Document</title>
+      {% block title %}
+      {% endblock %}
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="http://127.0.0.1:8000/p1/hv/" target="_blank">Home</a></li>
+                <li><a href="http://127.0.0.1:8000/p1/av/" target="_blank">About</a></li>
+                <li><a href="http://127.0.0.1:8000/p1/cv/" target="_blank">Contact</a></li>
+                <li><a href="http://127.0.0.1:8000/p1/helpv/" target="_blank">Help</a></li>
+                <a href="http://127.0.0.1:8000/p1/login/" target="_blank"><button class="btn">Log in</button></a>
+                <a href="http://127.0.0.1:8000/p1/sign/" target="_blank"><button class="btn">Sign Up</button></a>
+            </ul>
+        </nav>
+    </header>
+  {% block content %}
+  {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'app1/css/sign_up.css' %}">
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="container">
+        <div class="new">
+            <h2>SignUp/Register</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <div>
+                    <label for="n1">First</label>
+                    <br>
+                    <input type="text" id="n1" name="First_Name" placeholder="E.g.,Joe">
+                </div>
+                <div>
+                    <label for="n2">Last</label>
+                    <br>
+                    <input type="text" id="n2" name="Last_Name" placeholder="E.g.,Biden">
+                </div>
+                <div>
+                    <label for="n3">Mobile</label>
+                    <br>
+                    <input type="number" id="n3" name="Mobile" placeholder="E.g.,+91 **********">
+                </div>
+                <div>
+                    <label for="n5">Gender</label>
+                    <label for="m">Male</label>
+                    <input type="radio" id="m" name="gender" value="M">
+                    <label for="f">FeMale</label>
+                    <input type="radio" id="f" name="gender" value="F">
+                    <label for="o">Other</label>
+                    <input type="radio" id="o" name="gender" value="O">
+                </div>
+                <div>
+                    <label for="n4">Email</label>
+                    <br>
+                    <input type="email" id="n4" name="Email" placeholder="E.g.,youremail@gmail.in">
+                </div>
+                <div>
+                    <label for="n5">Password</label>
+                    <br>
+                    <input type="password" id="n5" name="password" placeholder="**********">
+                </div>
+                <div>
+                    <button type="submit" class="btn">Sign Up</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>

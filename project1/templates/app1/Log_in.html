@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'app1/css/log_in.css' %}">
+    <title>Log In User</title>
+</head>
+<body>
+    <div class="container">
+        <div class="new">
+            <h2>Log In</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <div>
+                    <label for="n1">UserName</label>
+                    <br>
+                    <input type="email" id="n1" name="Email" placeholder="E.g.,youremail@gmail.in">
+                </div>
+                <div>
+                    <label for="n2">Password</label>
+                    <br>
+                    <input type="password" id="n2" name="password" placeholder="**********">
+                </div>
+                <div>
+                    <button type="submit" class="btn">Log In</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>

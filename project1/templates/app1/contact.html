@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'app1/css/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="first">
+            <h3>Address</h3>
+            <img src="{% static 'app1/Images/location.png' %}" alt="Address">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt incidunt neque quisquam? Optio?</p>
+        </div>
+        <div class="first">
+            <h3>Email</h3>
+            <img src="{% static 'app1/Images/email.jpg' %}" alt="Email">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt incidunt neque quisquam? Optio?</p>
+        </div>
+        <div class="first">
+            <h3>Contact</h3>
+            <img src="{% static 'app1/Images/call.png' %}" alt="Contact">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt incidunt neque quisquam? Optio?</p>
+        </div>
+        <div class="first">
+            <h3>Website</h3>
+            <img src="{% static 'app1/Images/website.png' %}" alt="Website">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt incidunt neque quisquam? Optio?</p>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="new">
+            <h2>Contact Us</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <div>
+                    <label for="fn">Full Name</label>
+                    <br>
+                    <input type="text" id="fn" name="FullName" placeholder="E.g.,Joe Biden">
+                </div>
+                <div>
+                    <label for="n1">UserName</label>
+                    <br>
+                    <input type="email" id="n1" name="Email" placeholder="E.g.,youremail@gmail.in">
+                </div>
+                <div>
+                    <label for="m">Message</label>
+                    <br>
+                    <input type="text" id="m" name="Message" placeholder="Messagee.......">
+                </div>
+                <div>
+                    <button type="submit" class="btn_contact">Send Message</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+{% endblock %}
